@@ -15,7 +15,16 @@
 # modify the passed in list.
 def remove_adjacent(nums):
     # +++your code here+++
-    return
+    if len(nums) == 0:
+        return nums
+    nl = []
+    nl.append(nums[0])
+    for x in nums[1:]:
+        if x in nl:
+            continue
+        else:
+            nl.append(x)
+    return nl
 
 
 # E. Given two lists sorted in increasing order, create and return a merged
@@ -24,7 +33,10 @@ def remove_adjacent(nums):
 # pass of both lists.
 def linear_merge(list1, list2):
     # +++your code here+++
-    return
+    n = []
+    n = list1 + list2
+    n.sort()
+    return n
 
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
