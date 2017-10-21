@@ -8,7 +8,7 @@
    * string2 **(Done)**
    * list2 **(Done)**
    * mimic **(Done)**
-   * wordcount **(Doing...)**
+   * wordcount **(Done)**
 * babynames
 * logpuzzle
 * copyspecial
