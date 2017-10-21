@@ -48,16 +48,37 @@ import sys
 def mimic_dict(filename):
     """Returns mimic dict mapping each word to list of words which follow it."""
     # +++your code here+++
+    # That's what I understood that was to do.
     with open(filename, 'r') as f:
         read_data = f.read()
     words = read_data.split()
 
-    return
+    mdict = {}
+
+    mdict[''] = words
+
+    for i in range(len(words)):
+        if words[i] not in mdict:
+            mdict[words[i]] = words[i:]
+        else:
+            mdict[words[i]].append(words[i:])
+    return mdict
 
 
 def print_mimic(mimic_dict, word):
     """Given mimic dict and start word, prints 200 random words."""
     # +++your code here+++
+    # I did not understand what it was to do, so I searched and found the bellow
+    # This code is from: https://stackoverflow.com/questions/39310164/unexpected-output-from-mimic-function-exercise-from-google-python-class
+    mimic_text = []
+    while len(mimic_text) < 200:
+        if word in mimic_dict:
+            next_word = random.choice(mimic_dict[word])
+            mimic_text.append(next_word)
+            word = next_word
+        else:
+            word = ''
+    print(' '.join(mimic_text))
     return
 
 
