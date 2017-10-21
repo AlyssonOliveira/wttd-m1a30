@@ -3,12 +3,12 @@
 ## Sequencia de resolução
 
 * basic
-   * string1
-   * list1
-   * string2
-   * list2
-   * mimic
-   * wordcount
+   * string1 **(Done)**
+   * list1 **(Done)**
+   * string2 **(Done)**
+   * list2 **(Done)**
+   * mimic **(Done)**
+   * wordcount **(Doing...)**
 * babynames
 * logpuzzle
 * copyspecial
