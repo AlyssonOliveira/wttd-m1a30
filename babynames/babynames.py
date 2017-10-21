@@ -42,6 +42,10 @@ def extract_names(filename):
     ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
     """
     # +++your code here+++
+    with open(filename, 'r') as f:
+        read_data = f.read()
+        words = read_data.split()
+    print(words)
     return
 
 
@@ -64,6 +68,20 @@ def main():
         # +++your code here+++
         # For each filename, get the names, then either print the text output
         # or write it to a summary file
+
+    with open('baby1990.html', 'r') as f:
+        data = f.read()
+    year = re.search(r'Popularity in .*([\d]{4})',data).group(1)
+    print(year)
+        rank = []
+
+    names = re.findall(r'<td>(\d+)</td><td>(\w+)</td><td>(\w+)</td>', data)
+    for item in names:
+        rank.append(item[1] + ' ' + item[0])
+        rank.append(item[2] + ' ' + item[0])
+    print(sorted(rank))
+
+    return
 
 
 if __name__ == '__main__':
