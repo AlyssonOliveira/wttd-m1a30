@@ -66,6 +66,7 @@ def print_words(filename):
 def print_top(filename):
     d = load(filename)
     count = 0
+    # Reference: https://stackoverflow.com/questions/613183/how-to-sort-a-dictionary-by-value
     for k, v in sorted(d.items(), key=lambda x: x[1], reverse=True):
         if count < 20:
             print(k, v)
